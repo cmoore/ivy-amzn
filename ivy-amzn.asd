@@ -4,14 +4,11 @@
   :author "Clint Moore <clint@ivy.io>"
   :license "Specify license here"
 
-  :depends-on (#:cxml
-               #:cxml-stp
-               #:xpath
-
-               #:ironclad
+  :depends-on (#:ironclad
                #:drakma
                #:s-base64
-               #:log4cl)
+               #:local-time
+               #:do-urlencode)
   
   :serial t
   :components ((:file "ivy-amzn")))

@@ -46,7 +46,7 @@ webservices.amazon.com
          (message (format nil "http://webservices.amazon.com/onca/xml?~a&Timestamp=~a&Signature=~a"
                           qstring
                           timestamp
-                          (hunchentoot:url-encode signature))))
+                          (do-urlencode:urlencode signature))))
     (drakma:http-request message
                          :content-type "application/x-www-form-urlencoded; charset=utf-8"
                          :external-format-out :utf-8
