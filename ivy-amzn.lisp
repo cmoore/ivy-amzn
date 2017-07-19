@@ -1,7 +1,11 @@
 ;; -*- mode: Lisp; Syntax: COMMON-LISP; Base: 10; eval: (hs-hide-all) -*-
 
 (defpackage #:ivy-amzn
-  (:use #:cl))
+  (:use #:cl)
+  (:export #:find-products
+           *amzn-access-key*
+           *amzn-secret-key*
+           *amzn-associate-tag*))
 
 (in-package #:ivy-amzn)
 
