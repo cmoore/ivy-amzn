@@ -56,4 +56,5 @@ webservices.amazon.com
                          :external-format-out :utf-8
                          :external-format-in :utf-8
                          :preserve-uri t
+                         :connection-timeout 60
                          :method :get)))
