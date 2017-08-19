@@ -51,10 +51,12 @@ webservices.amazon.com
                           qstring
                           timestamp
                           (do-urlencode:urlencode signature))))
-    (drakma:http-request message
-                         :content-type "application/x-www-form-urlencoded; charset=utf-8"
-                         :external-format-out :utf-8
-                         :external-format-in :utf-8
-                         :preserve-uri t
-                         :connection-timeout 60
-                         :method :get)))
+    (multiple-value-bind (result code)
+        (drakma:http-request message
+                             :content-type "application/x-www-form-urlencoded; charset=utf-8"
+                             :external-format-out :utf-8
+                             :external-format-in :utf-8
+                             :preserve-uri t
+                             :connection-timeout 60
+                             :method :get)
+      (values result code))))
